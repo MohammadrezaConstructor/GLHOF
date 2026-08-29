@@ -1,0 +1,56 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Environments and local configuration
+.venv/
+venv/
+env/
+.env
+.env.*
+!.env.example
+
+# Credentials and local IDE files
+/sc.txt
+*.pem
+*.key
+.idea/
+.vscode/
+
+# Raw, processed, benchmark, and generated research data
+# Keep the entire local data tree out of Git; several artifacts are hundreds of
+# MiB or multiple GiB and cannot be stored in the GitHub repository.
+data/
+*.duckdb
+*.duckdb.wal
+*.parquet
+*.joblib
+
+# API checkpoints and generated artifacts
+*_checkpoint.jsonl
+*_api_results.csv
+*_api_results.json
+*_api_results.jsonl
+reports/
+
+# Archives, logs, and local audit scratch files
+*.zip
+*.log
+dist/
+build/
+file_report.txt
+report.txt
+structure.txt
+tree_report.txt
+_history.txt
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini

@@ -1,0 +1,729 @@
+{
+  "document_status": "Operational context derived from repository audit and completed evaluation history as of 2026-07-15.",
+  "repository_root": "C:\\Users\\moham\\OneDrive - Constructor University\\llmsr",
+  "source_priority": [
+    "Actual current repository code, manifests, validation files, saved outputs",
+    "REPOSITORY_AUDIT.md and machine-readable audit appendices",
+    "PROJECT_CONTEXT.md",
+    "Older handoff/evaluation prose only when not contradicted by the audit"
+  ],
+  "framework": {
+    "structured_features": "F",
+    "evidence_corpus": "D_evid",
+    "policy_catalogue": "P",
+    "intent_llm": "M_I",
+    "evidence_llm": "M_E",
+    "explanation_llm": "M_X",
+    "optional_advisory_llm": "M_W",
+    "scenario": "tau_s",
+    "evidence_set": "E_s",
+    "evidence_role_mapping": "G_s",
+    "deterministic_ranking": "R_s",
+    "explanations": "X_s",
+    "governance": [
+      "C1",
+      "C2",
+      "C3",
+      "C4"
+    ],
+    "non_negotiable": "LLMs never perform numerical TOPSIS/WSM/VIKOR/Frequency ranking or autonomously alter supplier order."
+  },
+  "ted_data": {
+    "raw_can_rows": 1812113,
+    "valid_award_facts": 1540684,
+    "historical_2015_2016_award_facts": 977201,
+    "historical_facts_assigned_to_entities": 880906,
+    "frozen_supplier_entities": 301164,
+    "id_anchors": 10739,
+    "one_to_one_name_country_bridges": 9790,
+    "ambiguous_bridges": 239,
+    "raw_cn_rows": 721676,
+    "unique_cn_notices": 213336,
+    "strict_target_cohort_2017": 46942,
+    "historical_reference_matches": 26052,
+    "historical_match_rate": 0.55498,
+    "temporal_rule": {
+      "history_and_features": "2015-2016",
+      "targets_and_reference_outcomes": "2017"
+    }
+  },
+  "comparison_sets": {
+    "CPV2_MIN1": {
+      "reference_included": 22230,
+      "all_strict_share": 0.47356,
+      "conditional_coverage": 0.85329,
+      "median_size": 15525,
+      "mean_size": 19995.9,
+      "primary": true
+    },
+    "CPV3_MIN1": {
+      "reference_included": 18839,
+      "all_strict_share": 0.40133,
+      "conditional_coverage": 0.72313,
+      "median_size": 3753,
+      "mean_size": 6855.2
+    },
+    "CPV4_MIN1": {
+      "reference_included": 16232,
+      "all_strict_share": 0.34579,
+      "conditional_coverage": 0.62306,
+      "median_size": 1485,
+      "mean_size": 2569.8,
+      "ranking_status": "preprocessed but not executed in E1"
+    },
+    "CPV2_MIN2": {
+      "reference_included": 16940,
+      "all_strict_share": 0.36087,
+      "conditional_coverage": 0.65024,
+      "median_size": 4621,
+      "mean_size": 5780.6
+    },
+    "meaning": {
+      "CPV2": "first 2 CPV digits / division",
+      "CPV3": "first 3 / group",
+      "CPV4": "first 4 / class",
+      "MIN1": ">=1 historical award",
+      "MIN2": ">=2 historical awards"
+    }
+  },
+  "feature_store_rows": {
+    "global": 301164,
+    "CPV2": 333835,
+    "CPV3": 364027,
+    "CPV4": 392242,
+    "target": 46942
+  },
+  "final_backbone": {
+    "model": "M3_GEO_BUYER",
+    "method": "grouped TOPSIS",
+    "groups": [
+      "CATEGORY_FIT",
+      "GEOGRAPHIC_FIT",
+      "BUYER_RELATIONSHIP",
+      "ACTIVITY_PROFILE"
+    ],
+    "balanced_weights": [
+      0.25,
+      0.25,
+      0.25,
+      0.25
+    ]
+  },
+  "scenarios": {
+    "BALANCED": [
+      0.25,
+      0.25,
+      0.25,
+      0.25
+    ],
+    "CONTINUITY": [
+      0.25,
+      0.2,
+      0.4,
+      0.15
+    ],
+    "DIVERSIFICATION": [
+      0.3,
+      0.35,
+      0.1,
+      0.25
+    ]
+  },
+  "benchmarks": [
+    {
+      "benchmark_id": "E3_INTENT_GOLD",
+      "relative_path": "data/e3/e3_benchmark_50x3_gold_reviewed_v1.csv",
+      "exists": true,
+      "row_count": 150,
+      "columns_json": "[\"request_id\", \"base_case_id\", \"variant_id\", \"category\", \"request_text\", \"gold_scenario_profile\", \"gold_priority_groups_json\", \"gold_constraints_json\", \"gold_evidence_requests_json\", \"gold_requires_clarification\"]",
+      "identifier_columns": [
+        "request_id"
+      ],
+      "json_encoded_columns": [
+        "gold_priority_groups_json",
+        "gold_constraints_json",
+        "gold_evidence_requests_json"
+      ],
+      "duplicate_identifier_rows": 0,
+      "json_parse_failures_json": "{\"gold_priority_groups_json\": 0, \"gold_constraints_json\": 0, \"gold_evidence_requests_json\": 0}",
+      "enum_values_json": "{\"variant_id\": [\"V0\", \"V1\", \"V2\"], \"category\": [\"ambiguous\", \"constraint_sensitive\", \"direct_simple\", \"multi_criteria\", \"scenario_comparison\"], \"gold_scenario_profile\": [\"BALANCED\", \"CLARIFICATION_REQUIRED\", \"CONTINUITY\", \"CUSTOM\", \"DIVERSIFICATION\"]}",
+      "source_quote_grounding": "not_applicable",
+      "duplicate_claim_ids_within_packet": "not_applicable",
+      "manual_review_intent": "frozen final gold benchmark",
+      "immutable_status": "immutable; create a new version for corrections",
+      "columns": [
+        "request_id",
+        "base_case_id",
+        "variant_id",
+        "category",
+        "request_text",
+        "gold_scenario_profile",
+        "gold_priority_groups_json",
+        "gold_constraints_json",
+        "gold_evidence_requests_json",
+        "gold_requires_clarification"
+      ],
+      "json_parse_failures": {
+        "gold_priority_groups_json": 0,
+        "gold_constraints_json": 0,
+        "gold_evidence_requests_json": 0
+      },
+      "enum_values": {
+        "variant_id": [
+          "V0",
+          "V1",
+          "V2"
+        ],
+        "category": [
+          "ambiguous",
+          "constraint_sensitive",
+          "direct_simple",
+          "multi_criteria",
+          "scenario_comparison"
+        ],
+        "gold_scenario_profile": [
+          "BALANCED",
+          "CLARIFICATION_REQUIRED",
+          "CONTINUITY",
+          "CUSTOM",
+          "DIVERSIFICATION"
+        ]
+      }
+    },
+    {
+      "benchmark_id": "E3_ADJUDICATION",
+      "relative_path": "data/e3/e3_benchmark_adjudication_v1.csv",
+      "exists": true,
+      "row_count": 50,
+      "columns_json": "[\"base_case_id\", \"category\", \"adjudication_status\", \"gold_scenario_profile\", \"gold_priority_groups_json\", \"gold_constraints_json\", \"gold_evidence_requests_json\", \"gold_requires_clarification\", \"adjudication_note\", \"recommended_change\"]",
+      "identifier_columns": [
+        "base_case_id"
+      ],
+      "json_encoded_columns": [
+        "gold_priority_groups_json",
+        "gold_constraints_json",
+        "gold_evidence_requests_json"
+      ],
+      "duplicate_identifier_rows": 0,
+      "json_parse_failures_json": "{\"gold_priority_groups_json\": 0, \"gold_constraints_json\": 0, \"gold_evidence_requests_json\": 0}",
+      "enum_values_json": "{\"category\": [\"ambiguous\", \"constraint_sensitive\", \"direct_simple\", \"multi_criteria\", \"scenario_comparison\"], \"adjudication_status\": [\"ACCEPT\", \"ACCEPT_WITH_NOTE\"], \"gold_scenario_profile\": [\"BALANCED\", \"CLARIFICATION_REQUIRED\", \"CONTINUITY\", \"CUSTOM\", \"DIVERSIFICATION\"]}",
+      "source_quote_grounding": "not_applicable",
+      "duplicate_claim_ids_within_packet": "not_applicable",
+      "manual_review_intent": "manual adjudication helper; versioned",
+      "immutable_status": "immutable; create a new version for corrections",
+      "columns": [
+        "base_case_id",
+        "category",
+        "adjudication_status",
+        "gold_scenario_profile",
+        "gold_priority_groups_json",
+        "gold_constraints_json",
+        "gold_evidence_requests_json",
+        "gold_requires_clarification",
+        "adjudication_note",
+        "recommended_change"
+      ],
+      "json_parse_failures": {
+        "gold_priority_groups_json": 0,
+        "gold_constraints_json": 0,
+        "gold_evidence_requests_json": 0
+      },
+      "enum_values": {
+        "category": [
+          "ambiguous",
+          "constraint_sensitive",
+          "direct_simple",
+          "multi_criteria",
+          "scenario_comparison"
+        ],
+        "adjudication_status": [
+          "ACCEPT",
+          "ACCEPT_WITH_NOTE"
+        ],
+        "gold_scenario_profile": [
+          "BALANCED",
+          "CLARIFICATION_REQUIRED",
+          "CONTINUITY",
+          "CUSTOM",
+          "DIVERSIFICATION"
+        ]
+      }
+    },
+    {
+      "benchmark_id": "E3B_ADVISORY_GOLD",
+      "relative_path": "data/e3b/e3b_benchmark_20_gold.csv",
+      "exists": true,
+      "row_count": 20,
+      "columns_json": "[\"case_id\", \"category\", \"user_request\", \"initial_scenario_profile\", \"base_weights_json\", \"ranking_summary_json\", \"gold_recommendation_type\", \"gold_increase_json\", \"gold_decrease_json\", \"gold_preserve_json\", \"gold_adjustment_strength\", \"gold_requires_human_approval\", \"gold_clarification_required\", \"gold_risk_flags_json\"]",
+      "identifier_columns": [
+        "case_id"
+      ],
+      "json_encoded_columns": [
+        "base_weights_json",
+        "ranking_summary_json",
+        "gold_increase_json",
+        "gold_decrease_json",
+        "gold_preserve_json",
+        "gold_risk_flags_json"
+      ],
+      "duplicate_identifier_rows": 0,
+      "json_parse_failures_json": "{\"base_weights_json\": 0, \"ranking_summary_json\": 0, \"gold_increase_json\": 0, \"gold_decrease_json\": 0, \"gold_preserve_json\": 0, \"gold_risk_flags_json\": 0}",
+      "enum_values_json": "{\"category\": [\"activity_recency_emphasis\", \"ambiguous_clarify\", \"category_emphasis\", \"continuity_increase\", \"diversification_increase\", \"no_adjust\"], \"initial_scenario_profile\": [\"BALANCED\", \"CONTINUITY\", \"DIVERSIFICATION\"], \"gold_recommendation_type\": [\"ADJUST\", \"CLARIFY\", \"NO_ADJUST\"], \"gold_adjustment_strength\": [\"LARGE\", \"MODERATE\", \"NONE\", \"SMALL\"]}",
+      "source_quote_grounding": "not_applicable",
+      "duplicate_claim_ids_within_packet": "not_applicable",
+      "manual_review_intent": "frozen final gold benchmark",
+      "immutable_status": "immutable; create a new version for corrections",
+      "columns": [
+        "case_id",
+        "category",
+        "user_request",
+        "initial_scenario_profile",
+        "base_weights_json",
+        "ranking_summary_json",
+        "gold_recommendation_type",
+        "gold_increase_json",
+        "gold_decrease_json",
+        "gold_preserve_json",
+        "gold_adjustment_strength",
+        "gold_requires_human_approval",
+        "gold_clarification_required",
+        "gold_risk_flags_json"
+      ],
+      "json_parse_failures": {
+        "base_weights_json": 0,
+        "ranking_summary_json": 0,
+        "gold_increase_json": 0,
+        "gold_decrease_json": 0,
+        "gold_preserve_json": 0,
+        "gold_risk_flags_json": 0
+      },
+      "enum_values": {
+        "category": [
+          "activity_recency_emphasis",
+          "ambiguous_clarify",
+          "category_emphasis",
+          "continuity_increase",
+          "diversification_increase",
+          "no_adjust"
+        ],
+        "initial_scenario_profile": [
+          "BALANCED",
+          "CONTINUITY",
+          "DIVERSIFICATION"
+        ],
+        "gold_recommendation_type": [
+          "ADJUST",
+          "CLARIFY",
+          "NO_ADJUST"
+        ],
+        "gold_adjustment_strength": [
+          "LARGE",
+          "MODERATE",
+          "NONE",
+          "SMALL"
+        ]
+      }
+    },
+    {
+      "benchmark_id": "E4_EVIDENCE_GOLD",
+      "relative_path": "data/e4/e4_benchmark_40_gold.csv",
+      "exists": true,
+      "row_count": 40,
+      "columns_json": "[\"packet_id\", \"supplier_name\", \"category\", \"evidence_packet\", \"gold_claims_json\"]",
+      "identifier_columns": [
+        "packet_id"
+      ],
+      "json_encoded_columns": [
+        "gold_claims_json"
+      ],
+      "duplicate_identifier_rows": 0,
+      "json_parse_failures_json": "{\"gold_claims_json\": 0}",
+      "enum_values_json": "{\"category\": [\"certification_compliance\", \"delivery_capacity\", \"financial_stability\", \"mixed_conflicting\", \"past_performance\", \"social_labor\", \"sustainability\", \"technical_capability\"], \"claim.aspect\": [\"CERTIFICATION\", \"DELIVERY_CAPACITY\", \"FINANCIAL_STABILITY\", \"GOVERNANCE_COMPLIANCE\", \"PAST_PERFORMANCE\", \"SOCIAL\", \"SUSTAINABILITY\", \"TECHNICAL_CAPABILITY\"], \"claim.polarity\": [\"MIXED\", \"NEGATIVE\", \"NEUTRAL\", \"POSITIVE\", \"UNKNOWN\"], \"claim.temporal_status\": [\"CURRENT\", \"EXPIRED\", \"FUTURE\", \"HISTORICAL\", \"UNKNOWN\"], \"claim.evidence_role\": [\"ADVISORY\", \"ELIGIBILITY\", \"FEATURE\", \"SCENARIO\"]}",
+      "source_quote_grounding": "0 quote grounding failures",
+      "duplicate_claim_ids_within_packet": "0",
+      "manual_review_intent": "frozen final gold benchmark",
+      "immutable_status": "immutable; create a new version for corrections",
+      "columns": [
+        "packet_id",
+        "supplier_name",
+        "category",
+        "evidence_packet",
+        "gold_claims_json"
+      ],
+      "json_parse_failures": {
+        "gold_claims_json": 0
+      },
+      "enum_values": {
+        "category": [
+          "certification_compliance",
+          "delivery_capacity",
+          "financial_stability",
+          "mixed_conflicting",
+          "past_performance",
+          "social_labor",
+          "sustainability",
+          "technical_capability"
+        ],
+        "claim.aspect": [
+          "CERTIFICATION",
+          "DELIVERY_CAPACITY",
+          "FINANCIAL_STABILITY",
+          "GOVERNANCE_COMPLIANCE",
+          "PAST_PERFORMANCE",
+          "SOCIAL",
+          "SUSTAINABILITY",
+          "TECHNICAL_CAPABILITY"
+        ],
+        "claim.polarity": [
+          "MIXED",
+          "NEGATIVE",
+          "NEUTRAL",
+          "POSITIVE",
+          "UNKNOWN"
+        ],
+        "claim.temporal_status": [
+          "CURRENT",
+          "EXPIRED",
+          "FUTURE",
+          "HISTORICAL",
+          "UNKNOWN"
+        ],
+        "claim.evidence_role": [
+          "ADVISORY",
+          "ELIGIBILITY",
+          "FEATURE",
+          "SCENARIO"
+        ]
+      }
+    },
+    {
+      "benchmark_id": "E5_EXPLANATION_GOLD",
+      "relative_path": "data/e5/e5_benchmark_24_gold.csv",
+      "exists": true,
+      "row_count": 24,
+      "columns_json": "[\"case_id\", \"category\", \"user_request\", \"scenario_profile\", \"priority_groups_json\", \"group_weights_json\", \"supplier_context_json\", \"evidence_claims_json\", \"gold_top_supplier_order_json\", \"gold_required_priority_groups_json\", \"gold_required_governance_flags_json\", \"gold_requires_human_review\", \"gold_forbidden_terms_json\"]",
+      "identifier_columns": [
+        "case_id"
+      ],
+      "json_encoded_columns": [
+        "priority_groups_json",
+        "group_weights_json",
+        "supplier_context_json",
+        "evidence_claims_json",
+        "gold_top_supplier_order_json",
+        "gold_required_priority_groups_json",
+        "gold_required_governance_flags_json",
+        "gold_forbidden_terms_json"
+      ],
+      "duplicate_identifier_rows": 0,
+      "json_parse_failures_json": "{\"priority_groups_json\": 0, \"group_weights_json\": 0, \"supplier_context_json\": 0, \"evidence_claims_json\": 0, \"gold_top_supplier_order_json\": 0, \"gold_required_priority_groups_json\": 0, \"gold_required_governance_flags_json\": 0, \"gold_forbidden_terms_json\": 0}",
+      "enum_values_json": "{\"category\": [\"close_margin\", \"constraint_sensitive\", \"continuity\", \"diversification\", \"missing_evidence\", \"negative_evidence\", \"standard_balanced\"], \"scenario_profile\": [\"BALANCED\", \"CONTINUITY\", \"CUSTOM\", \"DIVERSIFICATION\"]}",
+      "source_quote_grounding": "not_applicable",
+      "duplicate_claim_ids_within_packet": "not_applicable",
+      "manual_review_intent": "frozen final gold benchmark",
+      "immutable_status": "immutable; create a new version for corrections",
+      "columns": [
+        "case_id",
+        "category",
+        "user_request",
+        "scenario_profile",
+        "priority_groups_json",
+        "group_weights_json",
+        "supplier_context_json",
+        "evidence_claims_json",
+        "gold_top_supplier_order_json",
+        "gold_required_priority_groups_json",
+        "gold_required_governance_flags_json",
+        "gold_requires_human_review",
+        "gold_forbidden_terms_json"
+      ],
+      "json_parse_failures": {
+        "priority_groups_json": 0,
+        "group_weights_json": 0,
+        "supplier_context_json": 0,
+        "evidence_claims_json": 0,
+        "gold_top_supplier_order_json": 0,
+        "gold_required_priority_groups_json": 0,
+        "gold_required_governance_flags_json": 0,
+        "gold_forbidden_terms_json": 0
+      },
+      "enum_values": {
+        "category": [
+          "close_margin",
+          "constraint_sensitive",
+          "continuity",
+          "diversification",
+          "missing_evidence",
+          "negative_evidence",
+          "standard_balanced"
+        ],
+        "scenario_profile": [
+          "BALANCED",
+          "CONTINUITY",
+          "CUSTOM",
+          "DIVERSIFICATION"
+        ]
+      }
+    }
+  ],
+  "experiments": [
+    {
+      "experiment_id": "TED preprocessing and frozen temporal data construction",
+      "purpose": "Build normalized awards, supplier dimension, 2017 targets, historical reference mapping, comparison sets, and feature stores.",
+      "data_source": "raw CAN/CN TED files",
+      "cases_or_packets": "not a single experiment cohort",
+      "script_used": "build_* preprocessing scripts",
+      "output_directory": "data/processed/*; reports/*preprocessing*",
+      "main_metrics": "Preflight 40 passed, 0 failed",
+      "validation_status": "preflight passed",
+      "completed_pilot_prepared_status": "completed",
+      "methodological_limitation": "Historical records do not reveal actual bidder lists or optimal suppliers."
+    },
+    {
+      "experiment_id": "E1",
+      "purpose": "Deterministic MCDM baselines over historically active supplier comparison sets.",
+      "data_source": "data/analysis/e1_rankings/e1_case_ranking_results.parquet",
+      "cases_or_packets": "CPV2_MIN1 N=22,230",
+      "script_used": "scripts/run_e1_deterministic_rankings.py",
+      "output_directory": "reports/e1_rankings/; data/analysis/e1_rankings/",
+      "main_metrics": "CPV2_MIN1 TOPSIS W@10=5.259%, W@50=14.148%, MRR=0.025639.",
+      "validation_status": "9 passed, 1 failed",
+      "completed_pilot_prepared_status": "completed with one non-primary validation discrepancy",
+      "methodological_limitation": "Historical reference-supplier positioning, not ranking accuracy or actual bidder-pool validation."
+    },
+    {
+      "experiment_id": "E1x",
+      "purpose": "Extended procurement-fit feature models.",
+      "data_source": "E1 primary cohort plus E1x fit indices",
+      "cases_or_packets": "N=22,230",
+      "script_used": "scripts/run_e1x_extended_procurement_fit_rankings_v2.py",
+      "output_directory": "reports/e1x_rankings/; data/analysis/e1x_rankings/",
+      "main_metrics": "M3_GEO_BUYER W@10=31.642%, W@50=56.293%, MRR=0.163086, median rank=34.",
+      "validation_status": "5 passed, 0 failed",
+      "completed_pilot_prepared_status": "completed",
+      "methodological_limitation": "Retrospective reference positioning, not proof of unique supplier optimality."
+    },
+    {
+      "experiment_id": "E1c",
+      "purpose": "Feature-group ablation for M3 procurement-fit model.",
+      "data_source": "E1x M3 backbone",
+      "cases_or_packets": "N=22,230",
+      "script_used": "scripts/run_r22_e1c_feature_ablation.py",
+      "output_directory": "reports/r22_e1c_ablation/; data/analysis/r22_e1c_ablation/",
+      "main_metrics": "Removing geography delta W@10=-7.593 pp; buyer=-3.603 pp; category=-2.600 pp; activity=-0.121 pp.",
+      "validation_status": "5 passed, 0 failed",
+      "completed_pilot_prepared_status": "completed",
+      "methodological_limitation": "Ablation is observational over historical reference outcomes."
+    },
+    {
+      "experiment_id": "E2/E2x",
+      "purpose": "Scenario sensitivity over deterministic M3 backbone.",
+      "data_source": "data/analysis/e2x_scenarios/e2x_case_scenario_results.parquet",
+      "cases_or_packets": "22,230 cases x 3 scenarios",
+      "script_used": "scripts/run_e2x_scenario_sensitivity.py",
+      "output_directory": "reports/e2x_scenarios/; data/analysis/e2x_scenarios/",
+      "main_metrics": "Balanced W@10=31.642%; Continuity=32.155%; Diversification=30.121%.",
+      "validation_status": "8 passed, 0 failed",
+      "completed_pilot_prepared_status": "completed",
+      "methodological_limitation": "Scenario profiles are policy settings; do not treat continuity as statistically superior."
+    },
+    {
+      "experiment_id": "E2b",
+      "purpose": "Bootstrap confidence intervals and scenario rank movement robustness.",
+      "data_source": "E1 and E2x saved outputs",
+      "cases_or_packets": "300 bootstrap resamples",
+      "script_used": "scripts/run_r22_e2b_bootstrap_robustness.py",
+      "output_directory": "reports/r22_e2b_robustness/",
+      "main_metrics": "Balanced W@10 95% CI [31.050,32.230]; Continuity [31.556,32.764]; Diversification [29.483,30.675].",
+      "validation_status": "outputs present; deterministic seeded bootstrap",
+      "completed_pilot_prepared_status": "completed",
+      "methodological_limitation": "CIs quantify resampling uncertainty over retrospective cases, not causal superiority."
+    },
+    {
+      "experiment_id": "E1d",
+      "purpose": "Historical-proxy subgroup sensitivity.",
+      "data_source": "E1x/E1c outputs plus supplier history proxies",
+      "cases_or_packets": "44 subgroup-model rows",
+      "script_used": "scripts/run_r22_e1d_proxy_subgroup_sensitivity.py",
+      "output_directory": "reports/r22_e1d_proxy_sensitivity/; data/analysis/r22_e1d_proxy_sensitivity/",
+      "main_metrics": "Prior-buyer M3 W@10=72.747%; no-prior M3 W@10=20.805%.",
+      "validation_status": "report and summary present",
+      "completed_pilot_prepared_status": "completed in repository; handoff still labels pending",
+      "methodological_limitation": "Explicitly not a full fairness audit."
+    },
+    {
+      "experiment_id": "E1e",
+      "purpose": "Traditional ML baselines versus frozen M3 TOPSIS.",
+      "data_source": "frozen temporal features",
+      "cases_or_packets": "train 6,000; validation 1,000; test 1,399",
+      "script_used": "scripts/run_r22_e1e_traditional_ml_baselines.py",
+      "output_directory": "reports/r22_e1e_ml_baselines/; data/analysis/r22_e1e_ml_baselines/",
+      "main_metrics": "Test TOPSIS_M3 W@10=31.451%; logistic=28.949%; HGB=17.941%.",
+      "validation_status": "report and summary present",
+      "completed_pilot_prepared_status": "completed/pilot-bounded in repository; handoff still labels pending",
+      "methodological_limitation": "Report says default pilot should be labelled bounded until larger final configuration."
+    },
+    {
+      "experiment_id": "E2c",
+      "purpose": "Controlled cross-modal profit, lead-time, and ESG trade-off experiment.",
+      "data_source": "author-controlled structured suppliers plus ESG extraction outputs",
+      "cases_or_packets": "72 suppliers; 12 cases per 4 scenarios",
+      "script_used": "scripts/run_r22_e2c_profit_leadtime_esg_tradeoffs.py",
+      "output_directory": "reports/r22_e2c_cross_modal/; data/analysis/r22_e2c_cross_modal/",
+      "main_metrics": "Top-1 agreement: economic 0.750, balanced 0.667, ESG priority 0.583, ESG constrained 0.833.",
+      "validation_status": "report, manifest, summary present",
+      "completed_pilot_prepared_status": "completed in repository; handoff still labels pending",
+      "methodological_limitation": "Controlled benchmark; not real TED applicability or realised ESG performance."
+    },
+    {
+      "experiment_id": "E3",
+      "purpose": "M_I intent/scenario formulation.",
+      "data_source": "data/e3/e3_benchmark_50x3_gold_reviewed_v1.csv",
+      "cases_or_packets": "150 requests",
+      "script_used": "scripts/run_e3_intent_scenario_openai_v5.py",
+      "output_directory": "reports/e3_final/; data/analysis/e3_final/",
+      "main_metrics": "Scenario accuracy=0.973; clarification accuracy=0.993; priority F1=0.916.",
+      "validation_status": "API outputs and metadata present",
+      "completed_pilot_prepared_status": "completed",
+      "methodological_limitation": "Controlled author-adjudicated benchmark, not supplier-ranking accuracy."
+    },
+    {
+      "experiment_id": "E3c",
+      "purpose": "Prompt/schema/reasoning ablation for M_I.",
+      "data_source": "20 V0 E3 base cases plus reused E3 baseline",
+      "cases_or_packets": "20 requests per configuration; 4 configurations",
+      "script_used": "scripts/run_r22_e3c_prompt_schema_ablation.py",
+      "output_directory": "reports/r22_e3c_ablation/; data/analysis/r22_e3c_ablation/",
+      "main_metrics": "Strict few-shot low priority F1=1.000; relaxed few-shot low=0.950; strict few-shot none=0.950.",
+      "validation_status": "manifest and comparison present",
+      "completed_pilot_prepared_status": "completed",
+      "methodological_limitation": "Small selected V0 subset; relaxed schema is not free text."
+    },
+    {
+      "experiment_id": "E3b",
+      "purpose": "M_W bounded advisory reweighting.",
+      "data_source": "data/e3b/e3b_benchmark_20_gold.csv",
+      "cases_or_packets": "20 cases",
+      "script_used": "scripts/run_e3b_advisory_reweighting_openai_v2.py",
+      "output_directory": "reports/e3b_final_v2/; data/analysis/e3b_final_v2/",
+      "main_metrics": "Decision accuracy=1.000; direction macro F1=0.801; strength accuracy=0.950.",
+      "validation_status": "API outputs and metadata present",
+      "completed_pilot_prepared_status": "completed",
+      "methodological_limitation": "LLM gives direction only; deterministic controller applies bounded weights."
+    },
+    {
+      "experiment_id": "E4",
+      "purpose": "M_E evidence extraction.",
+      "data_source": "data/e4/e4_benchmark_40_gold.csv",
+      "cases_or_packets": "40 packets",
+      "script_used": "scripts/run_e4_evidence_extraction_openai_v2.py",
+      "output_directory": "reports/e4_final/; data/analysis/e4_final/",
+      "main_metrics": "Mean claim F1=0.928; grounding=0.995; hallucination=0.005.",
+      "validation_status": "API outputs and metadata present",
+      "completed_pilot_prepared_status": "completed",
+      "methodological_limitation": "Controlled evidence packets, not verification of real supplier claims."
+    },
+    {
+      "experiment_id": "E4b noisy/incomplete",
+      "purpose": "Evidence robustness under noisy and incomplete perturbations.",
+      "data_source": "first 15 frozen E4 packets plus generated perturbations",
+      "cases_or_packets": "15 clean + 30 perturbed packets",
+      "script_used": "scripts/run_r22_e4b_evidence_robustness.py",
+      "output_directory": "reports/r22_e4b_robustness/; data/analysis/r22_e4b_robustness/",
+      "main_metrics": "Clean F1=0.931; noisy=0.928; incomplete=0.922; grounding=1.000 in all three conditions.",
+      "validation_status": "manifest conditions are INCOMPLETE and NOISY only",
+      "completed_pilot_prepared_status": "completed for noisy/incomplete; conflicting extension pending",
+      "methodological_limitation": "Conflict handling still requires manual inspection when --include-conflicting is used."
+    },
+    {
+      "experiment_id": "E5",
+      "purpose": "M_X explanation and governance.",
+      "data_source": "data/e5/e5_benchmark_24_gold.csv",
+      "cases_or_packets": "24 cases",
+      "script_used": "scripts/run_e5_explanation_governance_openai_v2.py",
+      "output_directory": "reports/e5_final_v2/; data/analysis/e5_final_v2/",
+      "main_metrics": "Order exact=1.000; top1=1.000; citation valid=1.000; governance flag F1=0.950.",
+      "validation_status": "API outputs and metadata present",
+      "completed_pilot_prepared_status": "completed",
+      "methodological_limitation": "Explains fixed deterministic ranking; no rank recalculation permitted."
+    },
+    {
+      "experiment_id": "Disruption-response demonstration",
+      "purpose": "Prepared demonstration concept.",
+      "data_source": "not verified as final result in requested reports",
+      "cases_or_packets": "not verified",
+      "script_used": "not verified in requested ingestion set",
+      "output_directory": "not verified",
+      "main_metrics": "none",
+      "validation_status": "not result-backed",
+      "completed_pilot_prepared_status": "pending/prepared",
+      "methodological_limitation": "Do not report as experimental evidence."
+    }
+  ],
+  "discrepancies": [
+    {
+      "id": "D001",
+      "severity": "medium",
+      "source": "reports/e1_rankings/e1_validation_checks.csv",
+      "description": "Saved E1 validation has CPV4_MIN1__winner_in_pool_case_count_matches_preprocessing=False (expected=16232; observed=None).",
+      "impact": "Primary CPV2_MIN1 downstream cohort is validated, but CPV4 sensitivity coverage should not be cited without resolving this mismatch.",
+      "recommended_action": "Inspect E1 pool specs versus candidate_pool_case_summary before using CPV4 sensitivity claims."
+    },
+    {
+      "id": "D002",
+      "severity": "medium",
+      "source": "EVALUATION_GUIDE.md vs E3b code/data",
+      "description": "Handoff says E3b recommendation types include KEEP, ADJUST, CLARIFY; actual code and benchmark use NO_ADJUST, ADJUST, CLARIFY.",
+      "impact": "Terminology mismatch can break downstream validators or manuscript text if KEEP is used.",
+      "recommended_action": "Use NO_ADJUST for current artifacts, or create a versioned benchmark/code change if renaming is desired."
+    },
+    {
+      "id": "D003",
+      "severity": "medium",
+      "source": "reports/r22_e1d_proxy_sensitivity/",
+      "description": "Handoff lists E1d as prepared/pending, but repository contains report, metadata, summary, and analysis outputs.",
+      "impact": "Experiment status in handoff is stale.",
+      "recommended_action": "Treat as completed only from saved artifacts and retain limitation that it is not a full fairness audit."
+    },
+    {
+      "id": "D004",
+      "severity": "medium",
+      "source": "reports/r22_e1e_ml_baselines/",
+      "description": "Handoff lists E1e as prepared/pending, but repository contains report, metadata, and summary outputs. Report labels default pilot as bounded until larger final configuration.",
+      "impact": "Status is more advanced than handoff, but claim strength remains limited.",
+      "recommended_action": "Mark completed/pilot-bounded and avoid final-large-baseline claims."
+    },
+    {
+      "id": "D005",
+      "severity": "medium",
+      "source": "reports/r22_e2c_cross_modal/",
+      "description": "Handoff lists E2c as prepared/pending, but repository contains report, manifest, and summary outputs.",
+      "impact": "Study B has result-backed artifacts in this repository.",
+      "recommended_action": "Mark completed controlled benchmark, separate from TED Study A."
+    },
+    {
+      "id": "D006",
+      "severity": "low",
+      "source": "reports/r22_e4b_robustness/r22_e4b_manifest.json",
+      "description": "E4b completed manifest includes only INCOMPLETE and NOISY; conflicting condition is not included.",
+      "impact": "Conflicting-evidence extension remains pending.",
+      "recommended_action": "Run only with explicit approval and --include-conflicting/--run-api if final conflict evaluation is needed."
+    }
+  ],
+  "frozen_benchmarks": [
+    "data/e3/e3_benchmark_50x3_gold_reviewed_v1.csv",
+    "data/e3/e3_benchmark_adjudication_v1.csv",
+    "data/e3b/e3b_benchmark_20_gold.csv",
+    "data/e4/e4_benchmark_40_gold.csv",
+    "data/e5/e5_benchmark_24_gold.csv"
+  ],
+  "known_exceptions": [
+    "E1 CPV4 comparison-set coverage was preprocessed, but E1 CPV4 ranking was not configured or executed.",
+    "The extended index used DT_AWARD instead of DT_AWARD_CLEAN; PRIOR_BUYER_RECENCY was inactive in the saved E1x run.",
+    "Core E3/E3b/E4/E5 API runners do not all have an explicit --run-api gate.",
+    "Full raw API payloads were not retained locally; parsed outputs and response IDs were retained.",
+    "E1e is executed at 6000/1000/1399 train/validation/test scale but its final/pilot designation is unresolved.",
+    "E4b conflicting evidence and the disruption/resilience experiment are not completed.",
+    "Dependencies are unpinned; Git history was unavailable in the audited environment."
+  ]
+}
