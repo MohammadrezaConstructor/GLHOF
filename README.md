@@ -1,4 +1,4 @@
-﻿# LLMSR Procurement Ranking Experiments
+﻿# GLHOF Procurement Ranking Experiments
 
 Research code for constructing historical supplier features, running
 deterministic procurement-ranking experiments, evaluating scenario sensitivity,
